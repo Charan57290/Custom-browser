@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Custom Browser with Tabs</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="app.js"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+  <div class="max-w-4xl mx-auto p-6">
+    <div class="bg-white shadow-lg rounded-xl p-4">
+      <div class="flex justify-between items-center mb-4">
+        <div id="tabs" class="space-x-2"></div>
+        <button onclick="newTab()" class="bg-green-600 text-white px-3 py-1 rounded">+ New Tab</button>
+      </div>
+      <div class="flex space-x-2 mb-4">
+        <button onclick="back()" class="bg-gray-300 px-3 py-1 rounded">⬅️ Back</button>
+        <button onclick="fwd()" class="bg-gray-300 px-3 py-1 rounded">➡️ Forward</button>
+        <input id="inp" type="text" class="flex-1 border border-gray-300 rounded px-2" placeholder="Enter URL (e.g., https://example.com)"/>
+        <button onclick="nav()" class="bg-blue-600 text-white px-3 py-1 rounded">Go</button>
+      </div>
+      <div id="page" class="text-center text-xl text-gray-700 py-10 border-t border-gray-300">🌐 No page loaded</div>
+    </div>
+  </div>
+</body>
+</html>
